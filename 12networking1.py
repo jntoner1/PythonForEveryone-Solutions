@@ -5,7 +5,11 @@ Exercise 1: Change the socket program socket1.py to prompt the user for the URL 
 import socket
 
 fullUrl = input('Enter URL: ')
-host = fullUrl.split('/')[2]
+try:
+    host = fullUrl.split('/')[2]
+except:
+    print('Invalid URL. Please include http:// or https://'
+    quit()
 
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
