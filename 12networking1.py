@@ -8,7 +8,7 @@ fullUrl = input('Enter URL: ')
 try:
     host = fullUrl.split('/')[2]
 except:
-    print('Invalid URL. Please include http:// or https://'
+    print('Invalid URL. Please include http:// or https://')
     quit()
 
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
